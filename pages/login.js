@@ -9,15 +9,15 @@ const Login = () => {
     console.table(data);
   };
   return (
-    <main className="flex justify-center flex-col items-center py-[4.875rem]">
+    <main className="flex justify-center flex-col items-center py-12 xl:py-[4.875rem] w-fit px-[1.5rem] md:px-0">
       <img src="/favicon.svg" className="w-[2rem] h-[1.6rem]" alt="logo" />
-      <div className="mt-[5.183rem] w-[25rem] p-8 bg-Semi-Dark-Blue text-Pure-White rounded-[20px] flex-col">
+      <div className="mt-[3.65rem] xl:mt-[5.183rem] w-[25rem] p-8 bg-Semi-Dark-Blue text-Pure-White rounded-[20px] flex-col">
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(handleSubmit)}>
-            <p className=" text-lg font-light">Login</p>
+            <p className="text-lg font-light ">Login</p>
             <div className=" mt-[2.5rem] space-y-[1.5rem]">
-              <InputField text={"Email Address"} name="email" />
-              <InputField text={"Password"} name="password" type="password" />
+              <InputField text="Email Address" name="email" />
+              <InputField text="Password" name="password" type="password" />
             </div>
             <div className="mt-[2.5rem] text-center text-sm font-light">
               <button
@@ -29,7 +29,7 @@ const Login = () => {
               <p className=" mt-[1.5rem] flex gap-x-[9px] justify-center">
                 Dont have an account?
                 <Link href="/signup" passHref>
-                  <span className="text-Red cursor-pointer hover:opacity-80">
+                  <span className="cursor-pointer text-Red hover:opacity-80">
                     Sign Up
                   </span>
                 </Link>
