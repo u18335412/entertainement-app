@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const Signup = () => {
   const methods = useForm();
+
   const [error, setPasswordError] = useState("");
 
   const handleSubmit = (data) => {
@@ -16,13 +17,12 @@ const Signup = () => {
       setPasswordError("Passwords don't match.");
       return;
     }
-    
   };
 
   return (
-    <main className="flex justify-center flex-col items-center xl:py-[4.875rem] w-fit px-[1.5rem] py-12 md:px-0">
+    <main className="flex justify-center flex-col items-center xl:py-[4.875rem] w-fit sm:w-screen px-[1.5rem] py-12 sm:px-0">
       <img src="/favicon.svg" className="w-[2rem] h-[1.6rem]" alt="logo" />
-      <div className="mt-[5.183rem] w-[25rem] p-8 bg-Semi-Dark-Blue text-Pure-White rounded-[20px] flex-col">
+      <div className="mt-[5.183rem] min-w-fit  w-screen sm:w-[25rem] p-8 bg-Semi-Dark-Blue text-Pure-White rounded-[20px] flex-col">
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(handleSubmit)}>
             <p className="text-lg font-light ">Sing Up</p>
@@ -42,7 +42,7 @@ const Signup = () => {
               <button className="bg-Red hover:text-Dark-Blue hover:bg-Pure-White transition-all py-[0.95rem] w-full rounded-md font-light ">
                 Create an account
               </button>
-              <p className=" mt-[1.5rem] flex gap-x-[9px] justify-center">
+              <p className=" mt-[1.5rem] flex flex-wrap gap-y-4 gap-x-[9px] justify-center">
                 Already have an account?
                 <Link href="/login" passHref>
                   <span className="cursor-pointer text-Red hover:opacity-80">
